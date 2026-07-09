@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sarmiento Parrillas</title>
+</head>
+
+<body>
+    <header id="inicio">
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li>🛒 <span id="contador-carrito">0</span></li>
+            </ul>
+        </nav>
+        <img src="img/ona jauke2.png" alt="Portada Ona Jauke Parrillas">
+        <div id="carrito-info">🛒 Carrito: <span id="contador-carrito">0</span></div>
+    </header>
+    <main>
+        <section class="productos" id="productos">
+
+        </section>
+        <section class="reseñas" id="reseñas">
+            <h2>Reseñas</h2>
+            <div class="grid-reseñas">
+                <article>
+                    <p>"Excelente calidad, la parrilla enrollable es perfecta para el camping"</p>
+                    <h4>- Juan P.</h4>
+                    <span>★★★★★</span>
+                </article>
+                <article>
+                    <p>"La parrilla chulengo es super versatil, podés tenerla cerca de la pile en verano y en invierno
+                        llevarla al quincho"</p>
+                    <h4>- Fernanda C.</h4>
+                    <span>★★★★★</span>
+                </article>
+
+                <article>
+                    <p>"A la 3 en 1 la tengo en el balcón, ¡Que el depto no te impida hacerte un asado el domingo"</p>
+                    <h4>- Julio A.</h4>
+                    <span>★★★★★</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="carrito" id="carrito">
+            <h2>Mi Carrito</h2>
+            <div id="carrito-lista"></div>
+            <p>Total: $<span id="carrito-total">0</span></p>
+            <button id="vaciar-carrito">Vaciar carrito</button>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2>Contacto</h2>
+            <form action="https://formspree.io/f/xvzdavyq" method="POST">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+        </section>
+
+    </main>
+    <footer>
+        <p>© 2025 Ona Jauke Parrillas. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
