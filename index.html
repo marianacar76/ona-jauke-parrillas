@@ -30,7 +30,7 @@
             </ul>
         </nav>
         <img src="img/ona jauke2.png" alt="Portada Ona Jauke Parrillas">
-        
+
     </header>
     <main>
         <section class="productos" id="productos">
@@ -64,19 +64,20 @@
             <div id="carrito-lista"></div>
             <p>Total: $<span id="carrito-total">0</span></p>
             <button id="vaciar-carrito">Vaciar carrito</button>
+            <button id="finalizar-compra">Finalizar compra</button>
         </section>
 
         <section class="contacto" id="contacto">
             <h2>Contacto</h2>
-            <form action="https://formspree.io/f/xvzdavyq" method="POST">
+            <form action="https://formspree.io/f/xvzdavyq" method="POST" id="formulario-contacto">
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre">
+                <input type="text" id="nombre" name="nombre" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
 
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje"></textarea>
+                <textarea id="mensaje" name="mensaje" required></textarea>
 
                 <button type="submit">Enviar</button>
             </form>

@@ -88,15 +88,24 @@ function convertirPrecioANumero(precioTexto) {
 function renderizarCarrito() {
   const listaCarrito = document.getElementById("carrito-lista");
   listaCarrito.innerHTML = "";
- 
+
   let total = 0;
- 
+
   carrito.forEach((producto, index) => {
     total += convertirPrecioANumero(producto.precio);
- 
+
     const item = document.createElement("div");
     item.textContent = producto.nombre + " - " + producto.precio + " ";
- 
+
+    const botonSumar = document.createElement("button");
+    botonSumar.textContent = "+1";
+    botonSumar.addEventListener("click", () => {
+      carrito.push(producto);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      actualizarContador();
+      renderizarCarrito();
+    });
+
     const botonEliminar = document.createElement("button");
     botonEliminar.textContent = "Eliminar";
     botonEliminar.addEventListener("click", () => {
@@ -105,11 +114,12 @@ function renderizarCarrito() {
       actualizarContador();
       renderizarCarrito();
     });
- 
+
+    item.appendChild(botonSumar);
     item.appendChild(botonEliminar);
     listaCarrito.appendChild(item);
   });
- 
+
   document.getElementById("carrito-total").textContent = total;
 }
  
@@ -123,3 +133,37 @@ document.getElementById("vaciar-carrito").addEventListener("click", () => {
 actualizarContador();
 renderizarCarrito();
  
+document.getElementById("finalizar-compra").addEventListener("click", () => {
+  if (carrito.length === 0) {
+    alert("Tu carrito está vacío. Agregá productos antes de finalizar la compra.");
+    return;
+  }
+
+  const total = document.getElementById("carrito-total").textContent;
+  alert("¡Gracias por tu compra! Total abonado: $" + total);
+
+  carrito = [];
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  actualizarContador();
+  renderizarCarrito();
+});
+
+
+document.getElementById("formulario-contacto").addEventListener("submit", (evento) => {
+  const nombre = document.getElementById("nombre").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const mensaje = document.getElementById("mensaje").value.trim();
+
+  if (nombre === "" || email === "" || mensaje === "") {
+    evento.preventDefault();
+    alert("Por favor completá todos los campos antes de enviar.");
+    return;
+  }
+
+  const formatoEmailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!formatoEmailValido.test(email)) {
+    evento.preventDefault();
+    alert("Por favor ingresá un email válido.");
+    return;
+  }
+});
