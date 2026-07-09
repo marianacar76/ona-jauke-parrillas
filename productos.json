@@ -1,0 +1,23 @@
+[
+  {
+    "nombre": "Parrilla enrrollable",
+    "descripcion": "Parrilla enrollable, económica, ideal para camping o motoviajeros",
+    "detalles": "Medidas: 40x40 cm. Material: hierro. Peso: 2kg, ideal para transportar.",
+    "precio": "$43.000",
+    "imagen": "img/enrollable.jpg"
+  },
+  {
+    "nombre": "Parrilla Chulengo",
+    "descripcion": "Parrilla chulengo, trasportable a cualquier sector del jardín, ideal para 10 personas",
+    "detalles": "Medidas: 100x50 cm. Material: acero inoxidable. Peso: 5kg, ideal para uso en el jardín.",
+    "precio": "$270.000",
+    "imagen": "img/chulengo.jpg"
+  },
+  {
+    "nombre": "Parrilla 3 en 1",
+    "descripcion": "Parrilla 3 en 1, ideal para familias con poco espacio en el hogar. Va bien en el balcón",
+    "detalles": "Medidas: 60x60 cm. Material: acero inoxidable. Peso: 4kg, ideal para uso en el balcón.",
+    "precio": "$82.000",
+    "imagen": "img/3en1.png"
+  }
+]
