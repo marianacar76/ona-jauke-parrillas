@@ -138,4 +138,19 @@ section h2 {
         font-size: 14px;
     }
 }
- 
+
+button {
+    background-color: #f5c49a;
+    color: #1a1a1a;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin: 2px;
+}
+
+button:hover {
+    background-color: #e0a875;
+}

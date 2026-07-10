@@ -89,6 +89,10 @@ function renderizarCarrito() {
   const listaCarrito = document.getElementById("carrito-lista");
   listaCarrito.innerHTML = "";
 
+  if (carrito.length === 0) {
+    listaCarrito.innerHTML = "<p>Tu carrito está vacío</p>";
+  }
+
   let total = 0;
 
   carrito.forEach((producto, index) => {
@@ -120,7 +124,7 @@ function renderizarCarrito() {
     listaCarrito.appendChild(item);
   });
 
-  document.getElementById("carrito-total").textContent = total;
+  document.getElementById("carrito-total").textContent = total.toLocaleString("es-AR");
 }
  
 document.getElementById("vaciar-carrito").addEventListener("click", () => {
